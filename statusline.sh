@@ -91,9 +91,11 @@ fmt_duration() {
 
 # ----------------------------------------------------------------------------
 # Extract everything in a single jq call (keeps the script fast).
-# One value per line; mapfile preserves empty lines, unlike tab-separated read.
+# One value per line; the read loop preserves empty lines, unlike
+# tab-separated read, and works on macOS's default bash 3.2 (no mapfile).
 # ----------------------------------------------------------------------------
-mapfile -t F < <(echo "$input" | jq -r '
+F=()
+while IFS= read -r _line; do F+=("$_line"); done < <(echo "$input" | jq -r '
     (.model.display_name // "Claude"),
     (.effort.level // ""),
     (.workspace.current_dir // .cwd // ""),
