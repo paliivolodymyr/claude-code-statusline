@@ -1,0 +1,35 @@
+{
+  "cwd": "/Users/you/Projects/EarnIt",
+  "session_id": "test-session-full",
+  "model": { "id": "claude-sonnet-4-6", "display_name": "Sonnet 4.6" },
+  "workspace": {
+    "current_dir": "/Users/you/Projects/EarnIt",
+    "project_dir": "/Users/you/Projects/EarnIt"
+  },
+  "version": "2.1.160",
+  "output_style": { "name": "explanatory" },
+  "cost": {
+    "total_cost_usd": 1.2345,
+    "total_duration_ms": 6840000,
+    "total_api_duration_ms": 230000,
+    "total_lines_added": 156,
+    "total_lines_removed": 23
+  },
+  "context_window": {
+    "context_window_size": 200000,
+    "used_percentage": 24.7,
+    "remaining_percentage": 75.3,
+    "current_usage": {
+      "input_tokens": 8500,
+      "output_tokens": 1200,
+      "cache_creation_input_tokens": 25000,
+      "cache_read_input_tokens": 16000
+    }
+  },
+  "effort": { "level": "high" },
+  "thinking": { "enabled": true },
+  "rate_limits": {
+    "five_hour": { "used_percentage": 25.4, "resets_at": 1781344800 },
+    "seven_day": { "used_percentage": 78.2, "resets_at": 1781776800 }
+  }
+}
